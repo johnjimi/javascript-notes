@@ -5,5 +5,4 @@
 ****************************/
 
 - Education purposes. Updating on documentation and revising.
-- These are notes that are useful for me or anyone else reading who is learning javascript
-- 
+- These are notes that are useful for me or anyone else reading who is learning javascript.
