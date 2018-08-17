@@ -1,0 +1,247 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    //this is a constructor function
+    function person(name, age){
+      //if you want to use this current object use "this"
+      this.name = name;
+      this.age = age;
+    }
+    
+    //"create a new instance of an object"
+    var jimi = new person("Jimi Somee",26);
+    var taylor = new person("Taylor Swift", 23);
+
+    //another example of using object
+    function vindictus (className,weapon,year){
+      this.className = className;
+      this.weapon = weapon;
+      this.year = year;
+      this.timewasted= timeplayed; //you dont add "()" like in other programming languages, parameters are already calculated
+    }
+
+    function timeplayed(){
+      var numYears= 2010 + this.year;
+      //whenver you do a calculation you have to "return" the value 
+      return numYears;
+    }
+    
+    var Jimini = new vindictus("Evie","Scythe",8);
+    var Sunny = new vindictus("Fiona","Hammer",6);
+
+
+  </script>
+	<title></title>
+</head>
+<!--Add Array Elements in a Loop-->
+<script type="text/javascript">
+
+
+
+</script>
+
+
+<!--push pop array method-->
+<script type="text/javascript">
+var animes = new Array("flcl","PSG","kiznaiver","darling in the franxxx");
+//var string1 = animes.join(" - "); //seperate something else then its default ","
+                                  //customize a string, need to add "" to pass a string
+
+//document.write(string1 + "<br />");
+document.write(animes[3] + "<br />");
+animes.pop(); //pop method, alters the array; now theres only 3 in the array
+document.write(animes[3] + "<br />"); //test, you will get an undefined
+</script>
+
+
+<!--array methods reverse, push, sort-->
+<script type="text/javascript">
+  var bp = new Array("head","toes","knees","shoulder");
+  //reverse
+  bp.reverse();
+  bp.push("tongue", "liver"); // you can add more items in the ()
+  bp.sort(); //sorts alphabeticallly
+
+  var string1 = bp.join(); //add the default "," to separate the items
+  document.write(string1 +"<br />")
+
+  </script>
+
+
+<!--Arrays, Objects uses array-->
+<script type="text/javascript">
+//use in Javascript tutorial 28 ARRAYS
+
+//fit as many inside tha parentahiss
+var peeps = new Array("J","Su","Da", "Mda");
+//to call a value in the array you input the index [#], Arrays start at 0
+document.write(peeps[0]); //if you add a index unlisted its gonna display "undefind"
+
+
+</script>
+
+<!--Arrays, more arrays example ya-->
+<script type="text/javascript">
+  //use in Javascript tutorial 29 ARRAYS
+  
+  var things = new Array(4);
+
+  things[0] = "green";
+  things[1] = "purple";
+  things[2] = "yellow";
+  things[3] = "red";
+  things[4] = "blue";
+
+ document.write(things[4]);
+
+//create a dynamic array without any number
+var stuffs = new Array();
+//you dont add any number to have a set number of arrays you can keep addin the variables
+
+var x = 9;
+var honda = 333-22;
+
+stuffs[0]= "baconator";
+stuffs[1]= " frosty";
+stuffs[2]= "baked potato";
+
+document.write(stuffs[1]);
+
+  </script>
+
+
+<!--onLoad and unLoad-->
+<!--
+<body onLoad="alert('your website has been loadedd');">
+-->
+<body unLoad="alert('your website has been loadedd');">
+  <button type="button"
+onclick="document.getElementById('time').innerHTML = Date()">Time boi</button>
+<p id="time"></p>
+
+
+<!--Object Oriented Programming-->
+<script type="text/javascript">
+//Object is a weird piece of data that has 	its own properties and methods 
+//properties = whats color of Jimi's hair,eyes, car
+//methods = the thing thay objects does "play vindictus, eat pizza"   
+//blueprint of the object
+
+ document.write("hey now ねえ ");
+  //"document" is an object
+  //"write" is an method
+
+
+ 
+//Javascript tutorial 25 creatung objects
+  document.write(jimi.age + "<br />");
+  document.write(taylor.name  + "<br /><br />");
+
+  document.write(Jimini.timewasted() + "<br />");
+  document.write(Sunny.timewasted() + "<br /><br />");
+  //write the [object].[objectpropertyname/method]
+  //^^ use () to actually use the method.
+
+
+</script>
+
+
+<!--Javascript tutorial 25-->
+<script type="text/javascript">
+  
+</script>
+
+
+<script type="text/javascript">
+	var first ="Jimi";
+	var last ="Som";
+
+	//if (( first=="Jimi") || (last=="Som")){ //&& and ||
+	//	document.write("hey good job buddty brother ya man")
+	//}
+
+/*
+	if(( first=="Jimi") || (last=="Som")){
+		document.write("bacon");
+  } */
+  
+</script>
+
+
+<!--Arrays are objects which mean you can make em do stuff [obj].[method]-->
+<script type="text/javascript">
+  var dudes = new Array("JImi", "John", "K ");
+  var chicks = new Array("jimi", "arri","aya ");
+
+  var people = chicks.concat(dudes); //flip the arrays to concat(add) chicks array first
+  var people2 = dudes.concat(chicks);  // arrays to concat (add) chicks array first
+
+  document.write(people[5]);
+  document.write(people2[5]);
+  document.write(dudes.length);
+
+</script>
+
+
+
+<script type="text/javascript">
+/*var x = 0; // try to add 35
+ do{
+    document.write(x+ " hello <br />");
+    x++;
+
+ }while (x<=20); //need to add th3e ; on the while loop
+//guarentted to run at least once.
+*/
+
+
+//event handling 22nd tutorial on thenewboston
+// you can place it anywhere besides inside the script tags
+
+</script>
+
+<!--Event Handler-->
+<!--
+<form> <!--add the javascript onClick "" <-- here -->
+<!--  <input type= "button" value="just click this" onClick="alert('lol');alert('wolo');"/>
+</form> -->
+
+
+<!-- Java scri[t tut on 23 - onMouseOver and OnLoad-->
+<!--
+<a href="www.johnjimysom.com" onMouseOver="alert('hi')">Hover your mouse on this.<br /><br /><br /><br /></a>
+<a href="www.johnjimysom.com" onMouseOut="alert('bye')">Hover your mouse on this and away.</a>
+-->
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <h1>{{ cool }}</h1>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+</body>
+</html>
+
+<script type="">
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Can you reverse me'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+</script>
+
+<script type="text/javascript">
+//assignment operator  is the "=" sign
+	var x = 4896;
+
+
+
+</script>
