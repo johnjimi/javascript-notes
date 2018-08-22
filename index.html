@@ -2,6 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--Date Objects Lesson Javascript - 37-->
+<script type="text/javascript">
+  function time(){
+    document.getElementById('time').innerHTML = Date()
+    /*This only seems to work for chrome ^^^*/
+    //code doesnt seem to woek on chrome
+    var now = new Date(); // grab the current time of day and stores at var "now"
+    var hours = now.getHours(); //method to get teh hours called getHours
+    var mins = now.getMinutes(); //method to get teh minutes called getMinutes
+    var second = now.getSeconds(); //method to get teh seconds called getSeconds
+    document.write(hours+":"+mins+":"+seconds+"<br/>");
+  }
+
+  //To display the function. Works for chrome.
+  setInterval("time()",1000); // per second refresh
+</script>
+
+
   <script type="text/javascript">
     //this is a constructor function
     function person(name, age){
@@ -35,11 +53,16 @@
   </script>
 	<title></title>
 </head>
-<!--Add Array Elements in a Loop-->
+  
+<!-- Lesson 34 Add Array Elements in a Loop-->
 <script type="text/javascript">
+/**
+var stuff = new Array("appkles", "lime", "ham", "tuna");
+stuff.sort();
 
-
-
+for (i=0; i<stuff.length; i++)//keep adding the list instead of updatina how much set arrraty
+  document.write(stuff[i] + "<br/>");
+**/
 </script>
 
 
@@ -116,11 +139,34 @@ document.write(stuffs[1]);
 <!--
 <body onLoad="alert('your website has been loadedd');">
 -->
-<body unLoad="alert('your website has been loadedd');">
+<body>
   <button type="button"
 onclick="document.getElementById('time').innerHTML = Date()">Time boi</button>
 <p id="time"></p>
 
+
+<!--Math Objects in Javascript 36-->
+<script type="text/javascript">
+//using javascript built in math objects
+//var n = prompt("enter a number", "");
+var answer = Math.sqrt(n); //81 then stores 9 at answer
+alert("the sqrt of "+ n + is + "is " + answer);
+//theres a lot of math methods online;
+
+   document.write(Math.E + "<br/>");
+   document.write(Math.PI); //to access the Array.["name of the array you created"]
+</script>
+
+
+<!--Associative Array Lesson 35-->
+<script type="text/javascript">
+//this type or array is rarely used.
+  var ohnjimi = new Array();
+  ohnjimi["color"] = "red"; // instaead of using the index # you can use strings to replace the # index system
+  ohnjimy["food"] = "pasta";
+
+  document.write("jimi favorite food is " + ohnjimi["color"]); //to access the Array.["name of the array you created"]
+</script>
 
 <!--Object Oriented Programming-->
 <script type="text/javascript">
@@ -220,6 +266,46 @@ onclick="document.getElementById('time').innerHTML = Date()">Time boi</button>
   <h1>{{ cool }}</h1>
   <button v-on:click="reverseMessage">Reverse Message</button>
 </div>
+
+<!--Javascript - Accessing Form Elements/ Any item on the <form> (Lesson 39)-->
+<br/>
+<!--This is very usefl to access array. YOu can access elements by writing their index # or the "name" of the element-->
+<form name = "jimisForm">
+  Username: <input type= "text" name="username"> <!--element[0]-->
+  Password: <input type= "password" name="password"> <!--element[1]-->
+  <input type="submit" value ="submit"> <!--element[2]-->
+</form>
+
+<script type="text/javascript">
+//to access the forms
+  
+ // var x = document.forms[0].elements[0].name; //name of the form ^^
+  //since its the first forms set thge index to 0
+  //same as tge commented code
+  var x = document.jimisForm.username.name; //easier instead of using forms[] arrayy
+ 
+  document.write(x);
+</script>
+
+<!--Javascript -simple form validation (Lesson 40)-->
+    <br/>
+    <!--This is very usefl to access array. YOu can access elements by writing their index # or the "name" of the element-->
+    <form name = "jimisForum">
+     <input type= "checkbox" name="box"/>
+     <input type= "button" value= "press mi" onClick"validator()" />
+    </form>
+    
+    <script type="text/javascript">
+    //check browswrs abvnd test
+    function validator(){
+      if(document.jimisForum.box.checked) //access the element and make it checked (property)
+        alert("it is checkexc");
+       else
+        alert("better check it");
+    }
+    </script>
+    
+
 </body>
 </html>
 
@@ -245,3 +331,15 @@ var app5 = new Vue({
 
 
 </script>
+
+<!--Extra learning-->
+<script type="text/javascript">
+  // http://jibbering.com/faq/faq_notes/script_tags.html
+  //helps to understand scripts in html
+  //https://stackoverflow.com/questions/6869312/how-do-i-hide-javascript-code-in-a-webpage
+ </script>
+
+<script type="text/javascript">
+  document.write(
+      '<script type="text/javascript" src="scriptFile.js"></scr'+'ipt>');
+  </script>
