@@ -6,3 +6,4 @@
 
 - Education purposes. Updating on documentation and revising.
 - These are notes that are useful for me or anyone else reading who is learning javascript.
+- Finished: August 28, 2018
